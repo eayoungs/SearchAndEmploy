@@ -1,6 +1,8 @@
 appnope==0.1.0
 bleach==2.1.2
 decorator==4.2.1
+Django==2.0.2
+djangorestframework==3.7.7
 entrypoints==0.2.3
 html5lib==1.0.1
 ipykernel==4.8.2
