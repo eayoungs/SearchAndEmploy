@@ -13,7 +13,7 @@ All other development should proceed under Python 3.
 `pip install -r requirements.txt`
 
 ### Install PostgreSQL Database
-Install PostgreSQL
+Install PostgreSQL  
 `psql -U postgres`  
 `CREATE DATABASE searchandemploy;`  
 `CREATE USER searchandemploy_user WITH PASSWORD 'password';`  
