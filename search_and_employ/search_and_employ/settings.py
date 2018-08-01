@@ -37,7 +37,11 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition      
+# Application definition
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "assets"),
+]
 
 WEBPACK_LOADER = {
     'DEFAULT': {
