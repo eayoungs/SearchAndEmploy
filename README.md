@@ -14,8 +14,8 @@ All other development should proceed under Python 3.
 
 ### Install PostgreSQL Database
 Install PostgreSQL  
+`psql -U postgres`  
 ```SQL
-psql -U postgres  
 CREATE DATABASE searchandemploy;  
 CREATE USER searchandemploy_user WITH PASSWORD 'password';  
 ALTER ROLE searchandemploy_user SET client_encoding TO 'utf8';  
