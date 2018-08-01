@@ -3,3 +3,4 @@ celery[redis]
 jupyterlab
 django-rest-framework
 django-webpack-loader
+psycopg2

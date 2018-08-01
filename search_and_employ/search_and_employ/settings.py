@@ -19,7 +19,7 @@ CELERY_RESULT_BACKEND = 'redis://localhost:6379'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TIMEZONE = 'America/Los_Angeles'
+CELERY_TIMEZONE = 'UTC'
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -96,8 +96,12 @@ WSGI_APPLICATION = 'search_and_employ.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'searchandemploy',
+        'USER': os.environ.get("MYAPP_DB_USER", ''),
+        'PASSWORD': os.environ.get("MYAPP_DB_PASSWORD", ''),
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
