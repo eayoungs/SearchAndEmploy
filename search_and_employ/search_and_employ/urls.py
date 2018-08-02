@@ -23,5 +23,6 @@ from linkedin import endpoints
 urlpatterns = [
     url('^admin/', admin.site.urls),
     url('^api/', include(endpoints)),
-    url(r'^', TemplateView.as_view(template_name='index.html'))
+    url(r'^', TemplateView.as_view(template_name='index.html')),
+    url(r'^rest-auth/', include('rest_auth.urls')),
 ]
