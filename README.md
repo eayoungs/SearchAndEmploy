@@ -22,6 +22,8 @@ ALTER ROLE searchandemploy_user SET client_encoding TO 'utf8';
 ALTER ROLE searchandemploy_user SET timezone TO 'UTC';  
 GRANT ALL PRIVILEGES ON DATABASE searchandemploy TO searchandemploy_user;  
 
-`cd search_and_employ/search_and_employ`
-
+`cd search_and_employ/`  
 `python manage.py runserver`
+
+`cd search_and_employ/frontend`
+`npm run start`  
