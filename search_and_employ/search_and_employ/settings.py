@@ -62,6 +62,10 @@ INSTALLED_APPS = [
     'webpack_loader',
     'linkedin',
     'rest_auth',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
 ]
 
 MIDDLEWARE = [

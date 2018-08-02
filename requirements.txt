@@ -5,4 +5,4 @@ django-rest-framework
 django-webpack-loader
 psycopg2
 coverage
-django-rest-auth
+django-rest-auth[with_social]
