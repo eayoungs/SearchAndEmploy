@@ -6,3 +6,5 @@ django-webpack-loader
 psycopg2
 coverage
 django-rest-auth[with_social]
+pandas
+sqlalchemy
