@@ -16,11 +16,12 @@ All other development should proceed under Python 3.
 Install PostgreSQL  
 `psql -U postgres`  
 ```SQL
-CREATE DATABASE searchandemploy;  
+CREATE DATABASE searchandemploy_db;  
 CREATE USER searchandemploy_user WITH PASSWORD 'password';  
 ALTER ROLE searchandemploy_user SET client_encoding TO 'utf8';  
 ALTER ROLE searchandemploy_user SET timezone TO 'UTC';  
-GRANT ALL PRIVILEGES ON DATABASE searchandemploy TO searchandemploy_user;  
+GRANT ALL PRIVILEGES ON DATABASE searchandemploy_db TO searchandemploy_user;  
+```
 
 `cd search_and_employ/`  
 `python manage.py runserver`

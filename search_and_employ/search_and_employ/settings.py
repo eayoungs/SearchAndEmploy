@@ -39,6 +39,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+AUTH_USER_MODEL = 'main.User'
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets"),
 ]
@@ -66,6 +68,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'rest_auth.registration',
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -105,9 +108,9 @@ WSGI_APPLICATION = 'search_and_employ.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'searchandemploy',
-        'USER': os.environ.get("MYAPP_DB_USER", ''),
-        'PASSWORD': os.environ.get("MYAPP_DB_PASSWORD", ''),
+        'NAME': 'searchandemploy_db',
+        'USER': os.environ.get("SAE_DB_USER", ''),
+        'PASSWORD': os.environ.get("SAE_DB_PASSWORD", ''),
         'HOST': 'localhost',
         'PORT': '5432',
     }
