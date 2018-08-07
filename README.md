@@ -8,9 +8,9 @@ All other development should proceed under Python 3.
 ## Run app
 -> Fork repo
 
-`git clone`
-
-`pip install -r requirements.txt`
+`git clone`  
+`cd SearchAndEmploy/`
+`pip install -r requirements.txt`  
 
 ### Install PostgreSQL Database
 Install PostgreSQL  
@@ -24,6 +24,8 @@ GRANT ALL PRIVILEGES ON DATABASE searchandemploy_db TO searchandemploy_user;
 ```
 
 `cd search_and_employ/`  
+`python manage.py makemigrations`  
+`python manage.py migrate`
 `python manage.py runserver`
 
 `cd search_and_employ/frontend`
