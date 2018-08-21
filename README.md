@@ -1,7 +1,7 @@
 # search_and_employ
 Employment search algorithms for jobs and networking
 
-### **Note:** The linkedin.ipynb notebook is using pyton-linked, as a short-cut
+### **Note:** The linkedin.ipynb notebook is using python-linked, as a short-cut
 to prototype searches. This library is out of date and runs best under Python 2.
 All other development should proceed under Python 3.
 
@@ -9,7 +9,7 @@ All other development should proceed under Python 3.
 -> Fork repo
 
 `git clone`  
-`cd SearchAndEmploy/`
+`cd SearchAndEmploy/`  
 `pip install -r requirements.txt`  
 
 ### Install PostgreSQL Database
