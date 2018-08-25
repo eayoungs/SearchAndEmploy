@@ -20,11 +20,34 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <script type="text/javascript" src="https://platform.linkedin.com/in.js">
+      api_key: 8625f2l86065aw
+      onLoad: onLinkedInLoad
+      authorize: true
+    </script>
+    <script type="text/javascript">
+      // Setup an event listener to make an API call once auth is complete
+      function onLinkedInLoad() {
+          IN.Event.on(IN, "auth", getProfileData);
+      }
+
+      // Handle the successful return from the API call
+      function onSuccess(data) {
+          console.log(data);
+      }
+
+      // Handle an error response from the API call
+      function onError(error) {
+          console.log(error);
+      }
+
+      // Use the API call wrapper to request the member's basic profile data
+      function getProfileData() {
+          IN.API.Raw("/people/~").result(onSuccess).error(onError);
+      }
+    </script>
   </head>
   <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -36,5 +59,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script type="in/Login"></script>
   </body>
 </html>
